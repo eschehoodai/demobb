@@ -611,6 +611,7 @@ textarea.form-control { min-height: 130px; resize: vertical; }
   .hero-actions { flex-direction: column; align-items: center; }
   .offer-header { flex-direction: column; }
   .booking-bar-inner { flex-direction: column; align-items: stretch; }
+  .feature-item { flex: 0 0 25%; }
 }
 @media (max-width: 480px) {
   .container { padding: 0 1rem; }
@@ -618,4 +619,5 @@ textarea.form-control { min-height: 130px; resize: vertical; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .hist-grid    { grid-template-columns: repeat(2, 1fr); }
   .room-card-body { padding: var(--space-md); }
+  .feature-item { flex: 0 0 25%; }
 }
