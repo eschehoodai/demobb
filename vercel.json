@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/webcam-bertsdorf",
+      "destination": "https://www.zittauer-schmalspurbahn.de/webcam/picbertsdorf/Still/073003_SNCPeriodic.jpg"
+    }
+  ]
+}
