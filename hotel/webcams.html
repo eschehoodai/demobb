@@ -38,7 +38,7 @@
       <div class="fade-up" style="max-width:800px;margin:0 auto;background:var(--color-accent);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-lg)">
         <!-- Webcam-Bild mit automatischer Aktualisierung alle 30 Sekunden -->
         <img id="webcam-img"
-             src="https://hotel-bb.de/cam/web000M.jpg"
+             src="/webcam-bertsdorf"
              alt="Live-Webcam Bahnhof Bertsdorf"
              style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#111">
         <div style="padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between">
@@ -85,7 +85,7 @@
     var img = document.getElementById('webcam-img');
     var dot = document.getElementById('cam-dot');
     if (dot) { dot.style.background = '#f59e0b'; }
-    img.src = 'https://hotel-bb.de/cam/web000M.jpg?' + Date.now();
+    img.src = '/webcam-bertsdorf?' + Date.now();
     img.onload = function() { if (dot) dot.style.background = '#22c55e'; };
     img.onerror = function() {
       if (dot) dot.style.background = '#ef4444';
