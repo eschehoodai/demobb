@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="de" data-depth="0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Bahnhof Bertsdorf – Urlaub im Zittauer Gebirge</title>
+  <meta name="description" content="Das traditionsreiche Hotel Bahnhof Bertsdorf im Zittauer Gebirge – direkt an der berühmten Zittauer Schmalspurbahn. Jetzt buchen und Ihren Urlaub genießen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- DIRS21 Quickbook Widget -->
+  <script src="https://v5.widgets.dirs21.de/quickbook.js?v=1.0.5" async type="module" defer></script>
+  <!-- Leaflet Maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0PWD0EPFW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-W0PWD0EPFW');</script>
+</head>
+<body>
+
+<header id="site-header"></header>
+<nav id="mobile-nav" class="mobile-nav"></nav>
+
+<main>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO SLIDER
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('../images/slider/home_slider01.jpeg')"></div>
+      <div class="hero-slide"        style="background-image:url('../images/slider/home_slider03.jpg')"></div>
+      <div class="hero-slide"        style="background-image:url('../images/slider/home_slider07.jpg')"></div>
+      <div class="hero-slide"        style="background-image:url('../images/slider/home_slider10.jpg')"></div>
+      <div class="hero-slide"        style="background-image:url('../images/slider/home_slider12.jpg')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Zittauer Gebirge · Sachsen</p>
+      <h1 class="hero-title">Willkommen im Hotel Bahnhof Bertsdorf</h1>
+      <p class="hero-subtitle">Tradition, Natur und Herzlichkeit – direkt an der legendären Zittauer Schmalspurbahn.</p>
+      <div class="hero-actions">
+        <a href="zimmer/zimmeruebersicht.html" class="btn btn-primary btn-lg">Zimmer entdecken</a>
+        <a href="zimmer/verfuegbarkeitskalender.html" class="btn btn-outline btn-lg">Jetzt buchen</a>
+      </div>
+    </div>
+
+    <div class="hero-dots">
+      <button class="hero-dot active" aria-label="Bild 1"></button>
+      <button class="hero-dot" aria-label="Bild 2"></button>
+      <button class="hero-dot" aria-label="Bild 3"></button>
+      <button class="hero-dot" aria-label="Bild 4"></button>
+      <button class="hero-dot" aria-label="Bild 5"></button>
+    </div>
+    <div class="hero-scroll-hint">Entdecken</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       BUCHUNGS-LEISTE (DIRS21)
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="booking-bar">
+    <div class="container">
+      <div class="booking-bar-inner">
+        <span class="booking-bar-label">Verfügbarkeit prüfen</span>
+        <div class="booking-bar-widget">
+          <div id="d21-quickbook"
+               class="d21-quickbook d21-widget"
+               d21-widget-uuid="12c3bb23-32d7-4615-925c-5dd34c6aead4"
+               d21-primary="true"
+               data-theme="dark"
+               data-border-radius="0.375">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       WILLKOMMEN – EINLEITUNG
+  ═══════════════════════════════════════════════════════════ -->
+  <section style="padding: var(--space-2xl) 0; background: var(--color-bg);">
+    <div class="container">
+      <div class="ti-block">
+        <div class="ti-text">
+          <p class="eyebrow">Herzlich Willkommen</p>
+          <h2>Ein Hauch Nostalgie,<br>ein unvergesslicher Aufenthalt</h2>
+          <div class="divider"></div>
+          <p class="lead">Das in der Gründerzeit erbaute Hotel Bahnhof Bertsdorf liegt unweit des gleichnamigen historischen Museumsbahnhofes.</p>
+          <p>Ob ein Besuch des Stellwerkes, die Doppelausfahrten oder auch die Führerstandsmitfahrten lassen große und kleine Herzen schneller schlagen. Das Hotel bietet ein gelungenes Spagat zwischen zahlreichen Wanderungen und Bademöglichkeiten sowie Natur pur.</p>
+          <p>Schon Kaiser Karl IV. fühlte sich im Zittauer Gebirge so wohl, dass er auf dem Berg Oybin sein Alterssitz ausbauen ließ. Gönnen Sie sich ein bisschen Nostalgie pur gepaart mit einem unvergesslichen Aufenthalt und fabelhaften Felsformationen wohin das Auge reicht.</p>
+          <a href="hotel/unser-hotel.html" class="btn btn-outline-dark" style="margin-top:1.25rem">Unser Hotel entdecken</a>
+        </div>
+        <div>
+          <img src="../images/hotel-bb/IMG_0697.jpg" alt="Hotel Bahnhof Bertsdorf Außenansicht" class="ti-img fade-up">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FEATURE STRIP
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="features-strip">
+    <div class="container">
+      <div style="display:flex;flex-wrap:nowrap;justify-content:space-between;gap:.5rem;text-align:center">
+        <div class="feature-item fade-up">
+          <div class="feature-icon">🍳</div>
+          <div class="feature-label">Frühstücksbuffet</div>
+        </div>
+        <div class="feature-item fade-up" style="transition-delay:.1s">
+          <div class="feature-icon">📶</div>
+          <div class="feature-label">Gratis WLAN</div>
+        </div>
+        <div class="feature-item fade-up" style="transition-delay:.2s">
+          <div class="feature-icon">🅿</div>
+          <div class="feature-label">Kostenloser Parkplatz</div>
+        </div>
+        <div class="feature-item fade-up" style="transition-delay:.3s">
+          <div class="feature-icon">🚲</div>
+          <div class="feature-label">E-Bike- &amp; Fahrradverleih</div>
+        </div>
+        <div class="feature-item fade-up" style="transition-delay:.4s">
+          <div class="feature-icon">🧖</div>
+          <div class="feature-label">Sauna &amp; Wellness</div>
+        </div>
+        <div class="feature-item fade-up" style="transition-delay:.5s">
+          <div class="feature-icon">🚂</div>
+          <div class="feature-label">Direkt an der Bimmelbahn</div>
+        </div>
+        <div class="feature-item fade-up" style="transition-delay:.6s">
+          <div class="feature-icon">💰</div>
+          <div class="feature-label">Bestpreis-Garantie</div>
+        </div>
+        <div class="feature-item fade-up" style="transition-delay:.7s">
+          <div class="feature-icon">🌿</div>
+          <div class="feature-label">Natur pur</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ZIMMER TEASER
+  ═══════════════════════════════════════════════════════════ -->
+  <section style="background: var(--color-bg); padding: var(--space-2xl) 0;">
+    <div class="container">
+      <div class="section-title fade-up">
+        <p class="eyebrow">Unsere Zimmer</p>
+        <h2>Komfort im Gründerzeitstil</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card fade-up">
+          <img src="../images/zimmer/Komfortzimmer_1.jpg" alt="Komfortzimmer" class="card-img">
+          <div class="card-body">
+            <p class="eyebrow card-eyebrow">Doppelzimmer Komfort</p>
+            <h3 class="card-title">Komfortzimmer</h3>
+            <p class="card-text">20 m² mit Bad-Wanne, Smart TV, WLAN. Ideales Zimmer für zwei Personen mit allem Komfort.</p>
+            <p class="card-price">ab 119 € <small>/ Nacht</small></p>
+            <a href="zimmer/zimmeruebersicht.html" class="btn btn-outline-dark btn-sm">Details</a>
+          </div>
+        </div>
+        <div class="card fade-up" style="transition-delay:.1s">
+          <img src="../images/zimmer/Doppelzimmer_Eckzimmer.jpg" alt="Eckzimmer" class="card-img">
+          <div class="card-body">
+            <p class="eyebrow card-eyebrow">Doppelzimmer 1. Klasse</p>
+            <h3 class="card-title">Eckzimmer</h3>
+            <p class="card-text">23 m² großzügiges Eckzimmer mit Panoramablick, 32" Smart TV und hochwertiger Bettwäsche.</p>
+            <p class="card-price">ab 135 € <small>/ Nacht</small></p>
+            <a href="zimmer/zimmeruebersicht.html" class="btn btn-outline-dark btn-sm">Details</a>
+          </div>
+        </div>
+        <div class="card fade-up" style="transition-delay:.2s">
+          <img src="../images/zimmer/Zimmer_Balkon.jpg" alt="Zimmer mit Balkon" class="card-img">
+          <div class="card-body">
+            <p class="eyebrow card-eyebrow">Doppelzimmer 1. Klasse</p>
+            <h3 class="card-title">Balkonzimmer Bahnblick</h3>
+            <p class="card-text">20 m² mit Balkon und direktem Blick auf den Museumsbahnhof – einzigartiges Erlebnis.</p>
+            <p class="card-price">ab 145 € <small>/ Nacht</small></p>
+            <a href="zimmer/zimmeruebersicht.html" class="btn btn-outline-dark btn-sm">Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:2.5rem">
+        <a href="zimmer/zimmeruebersicht.html" class="btn btn-primary">Alle Zimmer ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       BIMMELBAHN TEASER (FULL-WIDTH)
+  ═══════════════════════════════════════════════════════════ -->
+  <section style="padding:0;position:relative;min-height:420px;display:flex;align-items:center;overflow:hidden;">
+    <img src="../images/schmalspuhrbahn/Schmalspuhrbahn_001.jpg" alt="Zittauer Schmalspurbahn"
+         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(26,26,26,.88) 0%,rgba(26,26,26,.4) 100%)"></div>
+    <div class="container" style="position:relative;z-index:2;padding:var(--space-2xl) var(--space-md)">
+      <p class="eyebrow" style="color:var(--color-secondary)">Direkt vor der Tür</p>
+      <h2 style="color:#fff;max-width:560px;margin-bottom:1rem">Die Zittauer Bimmelbahn – ein Stück lebendige Geschichte</h2>
+      <p style="color:rgba(255,255,255,.8);max-width:480px;margin-bottom:2rem;font-size:.95rem">
+        Die 750-mm-Schmalspurbahn fährt seit 1890 täglich durch das Zittauer Gebirge. Bahnhof Bertsdorf ist der einmalige Knotenpunkt der Doppelausfahrt nach Oybin und Jonsdorf.
+      </p>
+      <a href="aktivurlaub/bimmelbahn.html" class="btn btn-gold">Mehr erfahren</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ANGEBOTE TEASER
+  ═══════════════════════════════════════════════════════════ -->
+  <section style="background:var(--color-light);padding:var(--space-2xl) 0;">
+    <div class="container">
+      <div class="section-title fade-up">
+        <p class="eyebrow">Unsere Pakete</p>
+        <h2>Besondere Angebote &amp; Arrangements</h2>
+      </div>
+      <div class="grid-3">
+        <div class="offer-card fade-up">
+          <div class="offer-card-body">
+            <div class="offer-header">
+              <h3 class="offer-title">Dampfeisenbahnromantik</h3>
+              <div class="offer-badge">ab <strong>320 €</strong>/Person</div>
+            </div>
+            <p class="offer-nights">3 Nächte Halbpension</p>
+            <ul class="offer-list">
+              <li>3x täglich Frühstücksbuffet</li>
+              <li>3x 2-Gang-Wahlmenü abends</li>
+              <li>3x Dampfeisenbahnfahrt täglich</li>
+              <li>Hochstellwerk-Führung &amp; Lokschuppen</li>
+              <li>Getränkeservice per Modelleisenbahn</li>
+            </ul>
+            <a href="angebote.html" class="btn btn-outline-dark btn-sm" style="margin-top:1rem">Mehr Details</a>
+          </div>
+        </div>
+        <div class="offer-card fade-up" style="transition-delay:.1s">
+          <div class="offer-card-body">
+            <div class="offer-header">
+              <h3 class="offer-title">Besinnliche Weihnachten</h3>
+              <div class="offer-badge">ab <strong>590 €</strong>/Person</div>
+            </div>
+            <p class="offer-nights">5 Nächte · 22.–27.12.2026</p>
+            <ul class="offer-list">
+              <li>5x Frühstück &amp; Abendessen</li>
+              <li>Weihnachtliches Menü am 24.12.</li>
+              <li>Besuch der Eisarena</li>
+              <li>Dampfeisenbahnfahrt</li>
+              <li>Lagerfeuer mit Glühwein</li>
+            </ul>
+            <a href="angebote.html" class="btn btn-outline-dark btn-sm" style="margin-top:1rem">Mehr Details</a>
+          </div>
+        </div>
+        <div class="offer-card fade-up" style="transition-delay:.2s">
+          <div class="offer-card-body">
+            <div class="offer-header">
+              <h3 class="offer-title">Silvester mit Familie</h3>
+              <div class="offer-badge">ab <strong>690 €</strong>/Person</div>
+            </div>
+            <p class="offer-nights">5 Nächte · 27.12.–01.01.</p>
+            <ul class="offer-list">
+              <li>5x Frühstücksbuffet &amp; Abendessen</li>
+              <li>Silvesterparty mit Musik &amp; Tanz</li>
+              <li>Mitternacht-Feuerwerk</li>
+              <li>Stadtmuseum &amp; Klosteranlage</li>
+              <li>Abend am Lagerfeuer mit Glühwein</li>
+            </ul>
+            <a href="angebote.html" class="btn btn-outline-dark btn-sm" style="margin-top:1rem">Mehr Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:2.5rem">
+        <a href="angebote.html" class="btn btn-primary">Alle Angebote ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       AKTIVURLAUB TEASER
+  ═══════════════════════════════════════════════════════════ -->
+  <section style="background:var(--color-bg);padding:var(--space-2xl) 0;">
+    <div class="container">
+      <div class="section-title fade-up">
+        <p class="eyebrow">Erlebnisse</p>
+        <h2>Aktivurlaub rund ums Hotel</h2>
+      </div>
+      <div class="grid-3">
+        <div class="activity-card fade-up">
+          <img src="../images/natur/Natur_001.jpg" alt="Wandern im Zittauer Gebirge">
+          <div class="activity-card-overlay"></div>
+          <div class="activity-card-body">
+            <h3>Wandern &amp; Natur</h3>
+            <p>400+ km ausgeschilderte Wanderwege direkt ab Hotel im Naturpark Zittauer Gebirge.</p>
+            <a href="aktivurlaub/natur-erleben.html" class="btn btn-outline btn-sm">Entdecken</a>
+          </div>
+        </div>
+        <div class="activity-card fade-up" style="transition-delay:.12s">
+          <img src="../images/ausflug/ausflug_01.jpg" alt="Tagesfahrten">
+          <div class="activity-card-overlay"></div>
+          <div class="activity-card-body">
+            <h3>Tagesfahrten</h3>
+            <p>Dresden, Prag, Görlitz, Breslau – organisierte Tagesausflüge in klimatisierten Fahrzeugen.</p>
+            <a href="aktivurlaub/tagesfahrten.html" class="btn btn-outline btn-sm">Ausflugsziele</a>
+          </div>
+        </div>
+        <div class="activity-card fade-up" style="transition-delay:.24s">
+          <img src="../images/winter/Winter_001.jpg" alt="Winter im Zittauer Gebirge">
+          <div class="activity-card-overlay"></div>
+          <div class="activity-card-body">
+            <h3>Wintersport</h3>
+            <p>90 km Skiwanderwege, 13 Rodelhänge, Liftanlagen – das Skizentrum Jonsdorf wartet auf Sie.</p>
+            <a href="aktivurlaub/skizentrum.html" class="btn btn-outline btn-sm">Skizentrum</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       BEWERTUNGEN
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="review-section">
+    <div class="container">
+      <div class="section-title fade-up">
+        <p class="eyebrow">Gästebewertungen</p>
+        <h2>Was unsere Gäste sagen</h2>
+      </div>
+      <div style="display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;align-items:center">
+        <div class="review-card fade-up">
+          <div class="review-score">94%</div>
+          <div class="review-label">Weiterempfehlung</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">Bewertet auf HolidayCheck</p>
+        </div>
+        <div style="max-width:440px;text-align:left" class="fade-up">
+          <p class="eyebrow">Direkt buchbar – Bestpreis garantiert</p>
+          <h3 style="margin-bottom:1rem">Buchen Sie direkt bei uns</h3>
+          <ul class="check-list">
+            <li>Bester Preis bei gleicher Leistung</li>
+            <li>Persönliche telefonische Beratung</li>
+            <li>Individuelle Urlaubsplanung bei Anreise</li>
+            <li>Gutschein bei Stornierung – gültig 3 Jahre</li>
+          </ul>
+          <a href="zimmer/verfuegbarkeitskalender.html" class="btn btn-primary" style="margin-top:1.5rem">Direkt buchen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       KARTE / ANREISE
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-layout">
+        <div class="map-info">
+          <p class="eyebrow">Anreise</p>
+          <h2>So finden Sie uns</h2>
+          <div class="divider"></div>
+          <div class="map-detail">
+            <span class="map-detail-icon">📍</span>
+            <div class="map-detail-text"><strong style="color:#fff">Hotel Bahnhof Bertsdorf</strong><br>Am Bahnhof 1<br>02785 Olbersdorf, Sachsen</div>
+          </div>
+          <div class="map-detail">
+            <span class="map-detail-icon">🚗</span>
+            <div class="map-detail-text">A4 Dresden–Görlitz bis Weißenberg, weiter Richtung Zittau. Ab Zittau Ausschilderung Richtung Jonsdorf/Zittauer Gebirge.</div>
+          </div>
+          <div class="map-detail">
+            <span class="map-detail-icon">🚂</span>
+            <div class="map-detail-text">Deutsche Bahn bis Zittau Hbf., dann Schmalspurbahn (SOEG) bis Bahnhof Bertsdorf – 200 m vom Hotel.</div>
+          </div>
+          <div class="map-detail">
+            <span class="map-detail-icon">📞</span>
+            <div class="map-detail-text"><a href="tel:+4935836980">+49 3583 69800</a></div>
+          </div>
+          <a href="hotel/lage-anreise.html" class="btn btn-gold" style="margin-top:1.5rem">Anreise-Details</a>
+        </div>
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+<button class="back-top" id="back-top" aria-label="Nach oben">↑</button>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildvorschau">
+  <button class="lightbox-close" aria-label="Schließen">✕</button>
+  <button class="lightbox-nav lightbox-prev" aria-label="Zurück">‹</button>
+  <button class="lightbox-nav lightbox-next" aria-label="Weiter">›</button>
+  <img class="lightbox-img" src="" alt="">
+  <p class="lightbox-caption"></p>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof L !== 'undefined') {
+      var map = L.map('map').setView([50.8847, 14.8742], 15);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      L.marker([50.8847, 14.8742])
+        .addTo(map)
+        .bindPopup('<strong>Hotel Bahnhof Bertsdorf</strong><br>Am Bahnhof 1, 02785 Olbersdorf')
+        .openPopup();
+    }
+  });
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

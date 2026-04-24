@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de" data-depth="1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lage &amp; Anreise – Hotel Bahnhof Bertsdorf</title>
+  <meta name="description" content="So finden Sie das Hotel Bahnhof Bertsdorf im Zittauer Gebirge – Anreise per PKW über die A4 oder per Bahn bis Zittau und dann mit der Schmalspurbahn.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+<header id="site-header"></header>
+<nav id="mobile-nav" class="mobile-nav"></nav>
+
+<main>
+
+  <div class="page-header">
+    <div class="container page-header-inner">
+      <p class="breadcrumb"><a href="../index.html">Home</a> · <a href="unser-hotel.html">Hotel</a> · Lage &amp; Anreise</p>
+      <h1>Lage &amp; Anreise</h1>
+      <div class="page-header-line"></div>
+    </div>
+  </div>
+
+  <!-- Lage Text -->
+  <section style="background:var(--color-bg)">
+    <div class="container">
+      <div class="ti-block">
+        <div class="ti-text">
+          <p class="eyebrow">Unser Standort</p>
+          <h2>Im östlichen Dreiländereck</h2>
+          <div class="divider"></div>
+          <p class="lead">Das Hotel Bahnhof Bertsdorf finden Sie in Sachsen im östlichen Dreiländereck zu Polen und Tschechien.</p>
+          <p>Gleich hinter dem Hotel beginnen die Wälder der Nordausläufer des Zittauer Gebirges. Von unserem Hotel haben Sie einen schönen Blick über den 3 km entfernten Olbersdorfer See auf die im Vorland des Zittauer Gebirges liegende Stadt Zittau mit ihren romantischen Türmen.</p>
+          <div class="map-detail" style="margin-top:1.5rem">
+            <span class="map-detail-icon" style="color:var(--color-primary);font-size:1.3rem">📍</span>
+            <div>
+              <strong>Hotel Bahnhof Bertsdorf</strong><br>
+              Am Bahnhof 1<br>
+              02785 Olbersdorf
+            </div>
+          </div>
+          <div class="map-detail">
+            <span class="map-detail-icon" style="color:var(--color-primary);font-size:1.3rem">📞</span>
+            <div><a href="tel:+4935836980">+49 3583 69800</a></div>
+          </div>
+        </div>
+        <img src="../../images/hotel-bb/IMG_0698.jpg" alt="Hotel Bahnhof Bertsdorf Lage" class="ti-img fade-up">
+      </div>
+    </div>
+  </section>
+
+  <!-- Karte -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-layout">
+        <div class="map-info">
+          <p class="eyebrow">Interaktive Karte</p>
+          <h2>Unser Standort</h2>
+          <div class="divider"></div>
+          <div class="map-detail">
+            <span class="map-detail-icon">🚗</span>
+            <div class="map-detail-text"><strong style="color:#fff">Per PKW:</strong><br>A4 Dresden–Görlitz bis Weißenberg, dann Richtung Zittau über Löbau. Ab Zittau Ausschilderung Richtung Jonsdorf direkt vor unser Hotel.</div>
+          </div>
+          <div class="map-detail">
+            <span class="map-detail-icon">🚂</span>
+            <div class="map-detail-text"><strong style="color:#fff">Per Bahn:</strong><br>Deutsche Bahn bis Zittau Hauptbahnhof, dann Schmalspurbahn (SOEG) bis Bahnhof Bertsdorf – nur 200 m vom Hotel entfernt.</div>
+          </div>
+          <div class="map-detail">
+            <span class="map-detail-icon">🧳</span>
+            <div class="map-detail-text"><strong style="color:#fff">Kofferservice:</strong><br>Senden Sie Ihr Gepäck per Hermes 2 Tage vor Urlaubsbeginn an unser Hotel.</div>
+          </div>
+        </div>
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bahnpreise -->
+  <section style="background:var(--color-light)">
+    <div class="container">
+      <div class="section-title fade-up">
+        <p class="eyebrow">Bahnreise</p>
+        <h2>Bahnpreise nach Zittau</h2>
+      </div>
+      <p style="text-align:center;color:#666;margin-bottom:2rem;max-width:580px;margin-left:auto;margin-right:auto">
+        Beispiel-ab-Preise pro Person ohne Ermäßigung. Aktuelle Preise bei der Deutschen Bahn anfragen.
+      </p>
+      <div style="max-width:600px;margin:0 auto" class="fade-up">
+        <div class="table-wrap">
+          <table class="styled-table">
+            <thead>
+              <tr><th>Abfahrtsort</th><th>ab Preis / Person</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Berlin</td><td><strong>ab 29,00 €</strong></td></tr>
+              <tr><td>Leipzig</td><td><strong>ab 19,00 €</strong></td></tr>
+              <tr><td>Frankfurt</td><td><strong>ab 33,00 €</strong></td></tr>
+              <tr><td>München</td><td><strong>ab 37,00 €</strong></td></tr>
+              <tr><td>Rostock</td><td><strong>ab 44,00 €</strong></td></tr>
+              <tr><td>Hamburg</td><td><strong>ab 49,00 €</strong></td></tr>
+              <tr><td>Stuttgart</td><td><strong>ab 79,00 €</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:.82rem;color:#999;margin-top:1rem">
+        * Alle Preise sind Richtwerte. Bitte aktuelle Fahrplaninfos und Preise bei der <a href="https://www.bahn.de" target="_blank" rel="noopener">Deutschen Bahn</a> anfragen.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+<button class="back-top" id="back-top" aria-label="Nach oben">↑</button>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof L !== 'undefined') {
+      var map = L.map('map').setView([50.8847, 14.8742], 15);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      L.marker([50.8847, 14.8742])
+        .addTo(map)
+        .bindPopup('<strong>Hotel Bahnhof Bertsdorf</strong><br>Am Bahnhof 1, 02785 Olbersdorf')
+        .openPopup();
+    }
+  });
+</script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de" data-depth="1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webcams – Hotel Bahnhof Bertsdorf</title>
+  <meta name="description" content="Live-Webcam am Bahnhof Bertsdorf – beobachten Sie die Zittauer Schmalspurbahn in Echtzeit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header id="site-header"></header>
+<nav id="mobile-nav" class="mobile-nav"></nav>
+
+<main>
+
+  <div class="page-header">
+    <div class="container page-header-inner">
+      <p class="breadcrumb"><a href="../index.html">Home</a> · <a href="unser-hotel.html">Hotel</a> · Webcams</p>
+      <h1>Webcams</h1>
+      <div class="page-header-line"></div>
+    </div>
+  </div>
+
+  <section style="background:var(--color-bg)">
+    <div class="container">
+      <div class="section-title fade-up">
+        <p class="eyebrow">Live-Stream</p>
+        <h2>Bahnhof Bertsdorf – Live</h2>
+      </div>
+      <p style="text-align:center;color:#666;max-width:600px;margin:0 auto 2.5rem">
+        Beobachten Sie die Zittauer Schmalspurbahn live an unserem Bahnhof – die Dampfzüge fahren täglich zwischen 9 und 18 Uhr stündlich nach Fahrplan.
+      </p>
+
+      <div class="fade-up" style="max-width:800px;margin:0 auto;background:var(--color-accent);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-lg)">
+        <!-- Webcam-Bild mit automatischer Aktualisierung alle 30 Sekunden -->
+        <img id="webcam-img"
+             src="https://hotel-bb.de/cam/web000M.jpg"
+             alt="Live-Webcam Bahnhof Bertsdorf"
+             style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#111">
+        <div style="padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between">
+          <div style="color:rgba(255,255,255,.6);font-size:.8rem">
+            <span style="display:inline-block;width:8px;height:8px;background:#22c55e;border-radius:50%;margin-right:.5rem" id="cam-dot"></span>
+            <span id="cam-status">Live · Bahnhof Bertsdorf</span>
+          </div>
+          <button onclick="refreshCam()" class="btn btn-sm btn-outline" style="font-size:.75rem">🔄 Aktualisieren</button>
+        </div>
+      </div>
+
+      <div class="notice notice-info fade-up" style="max-width:800px;margin:2rem auto 0">
+        Die Webcam zeigt den Bahnhof Bertsdorf in Echtzeit. Das Bild aktualisiert sich automatisch alle 30 Sekunden. Der Zugbetrieb ist täglich zwischen ca. 9:00 und 18:00 Uhr zu beobachten.
+      </div>
+    </div>
+  </section>
+
+  <!-- Bimmelbahn Info -->
+  <section style="background:var(--color-light)">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center">
+        <div class="fade-up">
+          <p class="eyebrow">Zittauer Schmalspurbahn</p>
+          <h2>Die Bimmelbahn vor Ihrer Haustür</h2>
+          <div class="divider"></div>
+          <p>Der Umsteigebahnhof Bertsdorf der Schmalspurbahnstrecke Zittau–Oybin/Jonsdorf befindet sich nur 200 m vom Hotel entfernt. Der Dampflokbetrieb und die Rangierarbeiten der ca. stündlich nach Fahrplan verkehrenden Züge sind deshalb aus nächster Nähe zu beobachten.</p>
+          <p>Das besondere Highlight: Die Doppelausfahrt – die gleichzeitige Ausfahrt zweier Dampfzüge Richtung Oybin und Jonsdorf – ein Schauspiel, das auf 750-mm-Spurweite weltweit einmalig ist!</p>
+          <a href="../aktivurlaub/bimmelbahn.html" class="btn btn-outline-dark" style="margin-top:1.25rem">Mehr zur Bimmelbahn</a>
+        </div>
+        <img src="../../images/bimmelbahn/bb5_gross.jpg" alt="Zittauer Schmalspurbahn" class="ti-img fade-up">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+<button class="back-top" id="back-top" aria-label="Nach oben">↑</button>
+
+<script>
+  // Auto-refresh webcam every 30 seconds
+  var camTimer;
+  function refreshCam() {
+    var img = document.getElementById('webcam-img');
+    var dot = document.getElementById('cam-dot');
+    if (dot) { dot.style.background = '#f59e0b'; }
+    img.src = 'https://hotel-bb.de/cam/web000M.jpg?' + Date.now();
+    img.onload = function() { if (dot) dot.style.background = '#22c55e'; };
+    img.onerror = function() {
+      if (dot) dot.style.background = '#ef4444';
+      document.getElementById('cam-status').textContent = 'Verbindung unterbrochen';
+    };
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    camTimer = setInterval(refreshCam, 30000);
+  });
+</script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

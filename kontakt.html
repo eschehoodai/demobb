@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de" data-depth="0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – Hotel Bahnhof Bertsdorf</title>
+  <meta name="description" content="Kontakt zum Hotel Bahnhof Bertsdorf: Telefon +49 3583 69800, info@hotel-bb.de, Am Bahnhof 1, 02785 Olbersdorf.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+<body>
+
+<header id="site-header"></header>
+<nav id="mobile-nav" class="mobile-nav"></nav>
+
+<main>
+
+  <div class="page-header">
+    <div class="container page-header-inner">
+      <p class="breadcrumb"><a href="index.html">Home</a> · Kontakt</p>
+      <h1>Kontakt</h1>
+      <div class="page-header-line"></div>
+    </div>
+  </div>
+
+  <section style="background:var(--color-bg)">
+    <div class="container">
+      <div class="grid-2" style="gap:3rem;align-items:start">
+
+        <!-- Kontaktdaten -->
+        <div class="fade-up">
+          <p class="eyebrow">Anschrift</p>
+          <h2>So erreichen Sie uns</h2>
+          <div class="divider"></div>
+
+          <div style="display:flex;flex-direction:column;gap:1.25rem;margin-top:1.5rem">
+            <div style="display:flex;gap:1rem;align-items:flex-start">
+              <span style="font-size:1.4rem;line-height:1">📍</span>
+              <div>
+                <strong>Adresse</strong><br>
+                Hotel Bahnhof Bertsdorf<br>
+                Am Bahnhof 1<br>
+                02785 Olbersdorf
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:center">
+              <span style="font-size:1.4rem;line-height:1">📞</span>
+              <div>
+                <strong>Telefon</strong><br>
+                <a href="tel:+4935836980" style="color:var(--color-primary)">+49 3583 69800</a>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:center">
+              <span style="font-size:1.4rem;line-height:1">✉️</span>
+              <div>
+                <strong>E-Mail</strong><br>
+                <a href="mailto:info@hotel-bb.de" style="color:var(--color-primary)">info@hotel-bb.de</a>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:center">
+              <span style="font-size:1.4rem;line-height:1">📸</span>
+              <div>
+                <strong>Instagram</strong><br>
+                <a href="https://www.instagram.com/hotelbahnhofbertsdorf/" target="_blank" rel="noopener" style="color:var(--color-primary)">@hotelbahnhofbertsdorf</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini-Karte -->
+          <div id="map" style="height:280px;margin-top:2rem;border-radius:8px;overflow:hidden;box-shadow:var(--shadow-md)"></div>
+        </div>
+
+        <!-- Kontaktformular -->
+        <div class="form-card fade-up" style="transition-delay:.1s">
+          <p class="eyebrow">Nachricht senden</p>
+          <h3 style="margin-bottom:1.5rem">Schreiben Sie uns</h3>
+          <form id="contact-form" novalidate>
+            <div>
+              <label class="form-label" for="ct-name">Name *</label>
+              <input type="text" id="ct-name" name="name" class="form-control" required>
+            </div>
+            <div style="margin-top:1rem">
+              <label class="form-label" for="ct-anschrift">Anschrift *</label>
+              <input type="text" id="ct-anschrift" name="anschrift" class="form-control" required>
+            </div>
+            <div style="margin-top:1rem">
+              <label class="form-label" for="ct-plz">PLZ / Ort *</label>
+              <input type="text" id="ct-plz" name="plz_ort" class="form-control" required>
+            </div>
+            <div style="margin-top:1rem">
+              <label class="form-label" for="ct-email">E-Mail *</label>
+              <input type="email" id="ct-email" name="email" class="form-control" required>
+            </div>
+            <div style="margin-top:1rem">
+              <label class="form-label" for="ct-betreff">Betreff *</label>
+              <input type="text" id="ct-betreff" name="betreff" class="form-control" required>
+            </div>
+            <div style="margin-top:1rem">
+              <label class="form-label" for="ct-nachricht">Nachricht *</label>
+              <textarea id="ct-nachricht" name="nachricht" class="form-control" rows="5" required></textarea>
+            </div>
+            <div class="form-check" style="margin-top:1.25rem">
+              <input type="checkbox" id="ct-datenschutz" name="datenschutz" required>
+              <label for="ct-datenschutz">Ich akzeptiere die <a href="datenschutz.html">Datenschutzerklärung</a>. *</label>
+            </div>
+            <div class="form-check" style="margin-top:.75rem">
+              <input type="checkbox" id="ct-newsletter" name="newsletter">
+              <label for="ct-newsletter">Ja, ich möchte weitere Informationen per E-Mail / Newsletter bekommen.</label>
+            </div>
+            <div style="margin-top:1.75rem">
+              <button type="submit" class="btn btn-primary">Nachricht senden</button>
+            </div>
+            <p id="form-feedback" style="margin-top:1rem;font-size:.9rem;color:var(--color-primary);display:none"></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+<button class="back-top" id="back-top" aria-label="Nach oben">↑</button>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLs=" crossorigin=""></script>
+<script src="assets/js/main.js"></script>
+<script>
+  // Leaflet map
+  var map = L.map('map', { scrollWheelZoom: false }).setView([50.8847, 14.8742], 15);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 19
+  }).addTo(map);
+  var icon = L.divIcon({
+    className: '',
+    html: '<div style="background:var(--color-primary);width:18px;height:18px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.4)"></div>',
+    iconSize: [18, 18],
+    iconAnchor: [9, 9]
+  });
+  L.marker([50.8847, 14.8742], { icon: icon })
+    .addTo(map)
+    .bindPopup('<strong>Hotel Bahnhof Bertsdorf</strong><br>Am Bahnhof 1<br>02785 Olbersdorf')
+    .openPopup();
+
+  // Contact form
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!this.checkValidity()) {
+      this.reportValidity();
+      return;
+    }
+    const fb = document.getElementById('form-feedback');
+    fb.textContent = 'Vielen Dank für Ihre Nachricht! Wir werden uns so schnell wie möglich bei Ihnen melden.';
+    fb.style.display = 'block';
+    this.reset();
+  });
+</script>
+</body>
+</html>

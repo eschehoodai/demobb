@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de" data-depth="1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verfügbarkeit &amp; Buchung – Hotel Bahnhof Bertsdorf</title>
+  <meta name="description" content="Zimmer online buchen – Verfügbarkeitskalender und Direktbuchung beim Hotel Bahnhof Bertsdorf.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header id="site-header"></header>
+<nav id="mobile-nav" class="mobile-nav"></nav>
+
+<main>
+
+  <div class="page-header">
+    <div class="container page-header-inner">
+      <p class="breadcrumb"><a href="../index.html">Home</a> · <a href="zimmeruebersicht.html">Zimmer</a> · Verfügbarkeit</p>
+      <h1>Verfügbarkeit &amp; Buchung</h1>
+      <div class="page-header-line"></div>
+    </div>
+  </div>
+
+  <section style="background:var(--color-bg);padding-bottom:0">
+    <div class="container" style="text-align:center;padding-bottom:2rem">
+      <p class="eyebrow">Online Buchen</p>
+      <h2>Direkt buchen – Bestpreis garantiert</h2>
+      <div class="divider-center"></div>
+      <p class="lead" style="max-width:580px;margin:0 auto">
+        Buchen Sie jetzt direkt bei uns und sichern Sie sich den besten Preis. Keine versteckten Kosten, persönliche Beratung inklusive.
+      </p>
+    </div>
+
+    <!-- DIRS21 IBE iFrame – volle Breite, keine Box -->
+    <iframe
+      id="ibe-frame"
+      src="https://reservation.one.dirs21.de/hotel-bbde/?culture=de-DE"
+      title="Online-Buchungssystem Hotel Bahnhof Bertsdorf"
+      loading="lazy"
+      allow="payment"
+      style="width:100%;border:none;display:block;min-height:800px">
+    </iframe>
+  </section>
+
+  <!-- Kontakt-Buchung -->
+  <section style="background:var(--color-light)">
+    <div class="container text-center">
+      <p class="eyebrow">Persönliche Beratung</p>
+      <h2 style="margin-bottom:1rem">Lieber telefonisch buchen?</h2>
+      <p style="max-width:480px;margin:0 auto 2rem;color:#666">
+        Unser Team berät Sie gerne persönlich und erstellt Ihr individuelles Urlaubsprogramm.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="tel:+4935836980" class="btn btn-primary btn-lg">📞 +49 3583 69800</a>
+        <a href="mailto:info@hotel-bb.de" class="btn btn-outline-dark btn-lg">✉ info@hotel-bb.de</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="site-footer"></footer>
+<button class="back-top" id="back-top" aria-label="Nach oben">↑</button>
+
+<script src="../assets/js/main.js"></script>
+<script>
+  // Auto-resize IBE iframe to its content height
+  var ibeFrame = document.getElementById('ibe-frame');
+  window.addEventListener('message', function(e) {
+    if (ibeFrame && e.data && e.data.height) {
+      ibeFrame.style.minHeight = e.data.height + 'px';
+    }
+  });
+</script>
+</body>
+</html>
